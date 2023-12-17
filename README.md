@@ -11,26 +11,10 @@
 ---
 
 ## 实现将UNet的ANN转SNN过程
-+ **实现代码在ann_convert_snn文件夹**
++ **实现代码在UNet_convert_snn文件夹**
 ```
-cd /home/Brain_Cog/ann_convert_snn/
+cd /home/Brain_Cog/UNet_convert_snn/
 ```
-
-+ **VGG16的转换实现**
-```
-python CIFAR10_VGG16.py
-python converted_CIFAR10.py
-```
-
-| 模型                | 准确率 (Accuracy) |
-| :------------------: | :---------------: |
-| VGG16_ANN           | 0.9543            |
-| VGG16_SNN(step=2)   | 0.1307            |
-| VGG16_SNN(step=4)   | 0.7916            |
-| VGG16_SNN(step=8)   | 0.9216            |
-| VGG16_SNN(step=16)  | 0.9442            |
-| VGG16_SNN(step=32)  | 0.9516            |
-| VGG16_SNN(step=64)  | 0.9524            |
 
 + **UNet的转换实现**
 

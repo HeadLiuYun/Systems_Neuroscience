@@ -43,9 +43,16 @@ conda activate TZJZ
  ```
 ## 数据和预训练模型获取
 
+### 实验一
+
 通过下面链接可以获得Lucchi数据集数据，以及训练好的UNet模型。将data文件夹放在/Brain_Cog/目录下，并将Unet.pth移动到/Brain_Cog/UNet_convert_snn/目录下。
 > 链接：https://pan.baidu.com/s/1kzzN9ps5sZhxNrnjMPYp3g?pwd=dd9l 
 提取码：dd9l
+
+
+ ### 实验二
+通过下面的链接可以获得预训练好的ANN模型。将压缩包解压至本项目的
+ 
 ---
 
 ## 实现将UNet的ANN转SNN过程

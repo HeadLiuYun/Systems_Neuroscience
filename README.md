@@ -1,7 +1,9 @@
 # 系统与计算神经科学大作业
 
 ---
-研究内容：目前SNN的训练难度很大，诸如STDP等生物可解释性方法在无监督上尚且效果不佳，在监督学习中，如何引入监督信号也是一大困难。因此研究人员开始思考能否定制一个与SNN结构相同的ANN结构，使用反向传播算法训练定制好的ANN，然后将得到的权重直接映射到SNN中去。本文参考发表在IJCAI2022上的一篇文章Efficient and Accurate Conversion of Spiking Neural Network with Burst Spikes，把预训练好的ANN中的pooling层和激活层转换为SNN结构，并在此基础上进行了2项研究工作：
+研究内容：
+
+目前SNN的训练难度很大，诸如STDP等生物可解释性方法在无监督上尚且效果不佳，在监督学习中，如何引入监督信号也是一大困难。因此研究人员开始思考能否定制一个与SNN结构相同的ANN结构，使用反向传播算法训练定制好的ANN，然后将得到的权重直接映射到SNN中去。本文参考发表在IJCAI2022上的一篇文章Efficient and Accurate Conversion of Spiking Neural Network with Burst Spikes，把预训练好的ANN中的pooling层和激活层转换为SNN结构，并在此基础上进行了2项研究工作：
 
 1.在深度UNet架构中将SNN用于像素级任务仍然是一个未被探索的领域，实验一将探索将在Lucchi线粒体数据上预训练好的UNet人工神经网络转换为SNN，并进行像素级别的语义分割任务。
 

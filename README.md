@@ -7,7 +7,12 @@
 分工：
 
 ...略 后期补充
-+ **数据和预训练模型获取**
+ **建立虚拟环境**
+运行conda env create -f environment.yaml
+
+conda activate
+ 
+ **数据和预训练模型获取**
 
 通过下面链接可以获得Lucchi数据集数据，以及训练好的UNet模型。将data文件夹放在/Brain_Cog/目录下，并将Unet.pth移动到/Brain_Cog/UNet_convert_snn/目录下。
 > 链接：https://pan.baidu.com/s/1kzzN9ps5sZhxNrnjMPYp3g?pwd=dd9l 

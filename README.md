@@ -24,9 +24,23 @@
  ```
 conda env create -f environment.yaml
 
-conda activate
+conda activate TZJZ
  ```
 
+在建立完虚拟环境后，为了使dataset适配CLIP模型，还需要对./anaconda3/envs/TZJZ/lib/python3.8/site-packages/braincog/datasets 第255行的函数get_cifar10_data进行修改。具体修改方式为：
+
+1.在参数部分添加：CLIP = False
+
+2.把函数中的前两行代码替换为：
+ ```
+    if CLIP:
+        train_datasets, _ = build_dataset(True, 224, 'CIFAR10', root, same_da)
+        test_datasets, _ = build_dataset(False, 224, 'CIFAR10', root, same_da)
+    else:
+        train_datasets, _ = build_dataset(True, 32, 'CIFAR10', root, same_da)
+        test_datasets, _ = build_dataset(False, 32, 'CIFAR10', root, same_da)
+
+ ```
 ## 数据和预训练模型获取
 
 通过下面链接可以获得Lucchi数据集数据，以及训练好的UNet模型。将data文件夹放在/Brain_Cog/目录下，并将Unet.pth移动到/Brain_Cog/UNet_convert_snn/目录下。

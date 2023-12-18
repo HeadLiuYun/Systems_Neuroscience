@@ -51,7 +51,9 @@ conda activate TZJZ
 
 
  ### 实验二
-通过下面的链接可以获得预训练好的ANN模型。将压缩包解压至本项目的
+通过下面的链接可以获得预训练好的ANN模型。将压缩包解压至本项目的该目录下：preliminary_study_of_convertor/pretrained_models。
+> 链接：https://pan.baidu.com/s/1HdmMG4TNWZ7ovlGB-Xjbdw?pwd=io33 
+提取码：io33 
  
 ---
 

@@ -112,6 +112,19 @@ python binaryzation.py
 该研究选择了不同规模、不同架构、不同训练方式的神经网络在CIFA10数据集上进行了ANN的预训练（CLIP除外），并将其转化为SNN，对比他们在CIFA10测试集上的分类准确率。希望该分析结果可以对日后的ANN转SNN工作带来一些启发。
 
 ### 不同网络架构对ANN转SNN精度的影响
+
+```
+cd preliminary_study_of_convertor/Cifa10/VGG18
+python CIFAR10_VGG18.py
+python converted_VGG18.py
+```
+
+```
+cd preliminary_study_of_convertor/Cifa10/Resnet18
+python CIFA10_Renet18.py
+python converted_Resnet18.py
+```
+
 该实验对比了预训练好的VGG18和Resnet18被转成SNN后的分类准确率，其中该VGG18和Resnet18相比，除了没有残差连接外，其他模块均完全相同。
 
 ![](Image/res.png)
@@ -119,6 +132,25 @@ python binaryzation.py
 从上图可以看出当网络中存在残差连接时，直接将pooling层和relu激活层转化成SNN结构会带来较大的精度损失。
 
 ### 不同网络大小对ANN转SNN精度的影响
+
+```
+cd preliminary_study_of_convertor/Cifa10/Resnet18
+python CIFA10_Renet18.py
+python converted_Resnet18.py
+```
+
+```
+cd preliminary_study_of_convertor/Cifa10/Resnet50
+python CIFA10_Renet50.py
+python converted_Resnet50.py
+```
+
+```
+cd preliminary_study_of_convertor/Cifa10/Resnet101
+python CIFA10_Renet101.py
+python converted_Resnet101.py
+```
+
 该实验对比了预训练好的Resnet18、Resnet50、Resnet101被转成SNN后的分类准确率。
 
 ![](Image/size.png)
@@ -126,6 +158,18 @@ python binaryzation.py
 从上图可以看出，当Resnet模型的参数量逐渐增加，被转成SNN后的精度损失会逐渐减少。
 
 ### 不同网络预训练方式对ANN转SNN精度的影响
+
+```
+cd preliminary_study_of_convertor/Cifa10/Resnet50
+python CIFA10_Renet50.py
+python converted_Resnet50.py
+```
+
+```
+cd preliminary_study_of_convertor/Cifa10/CLIP_Res50
+python convert_a_CLIP.py
+```
+
 该实验对比了预训练好的Resnet50、CLIP_Res50被转成SNN后的分类准确率。其中CLIP_Res50直接调用了官方预训练参数，Resnet50在CIFA10上进行了预训练。
 
 ![](Image/contrast.png)
